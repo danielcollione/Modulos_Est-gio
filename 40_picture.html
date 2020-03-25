@@ -1,0 +1,27 @@
+<!doctype html> 
+<!--Documentação HTML: informa ao agente de usuario a versão do html que deve ser
+    renderizada.-->   
+
+<html lang="pt-br"> <!--Idioma português do Brasil-->
+    <head>
+        <title>Página de exemplo estrutura básica</title>
+        <meta charset="utf-8"> <!-- Tipo de codificação -->
+        <meta name="author" content="Daniel Collione">
+        <meta name="description" content="tag Picture">
+        <meta name="keywords" content="html5, tecnologia, dev">
+    
+        <meta name="viewport" content="width=device-width">
+    </head>
+    
+    <body>
+        <h1>Picture</h1>
+
+        <picture>
+            <source  media="(min-width: 480px)" sizes="33vw"
+            srcset="rwd-images/1280.jpg 1280w, rwd-images/960.jpg 960w, rwd-images/480.jpg 480w">
+            <source sizes="100vw" srcset="rwd-images/822_mob.jpg 822w, rwd-images/640_mob.jpg 640w, rwd-images/320_mob.jpg 320w">
+            <img src="rwd-images/1280.jpg" alt="imagem padrao">
+        </picture>
+        <!--1source: caso o minha tela seja maior que 480px, a imagem ocupará 1/3 da tela-->
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html> 
+<!--Documentação HTML: informa ao agente de usuario a versão do html que deve ser
+    renderizada.-->   
+
+<html lang="pt-br"> <!--Idioma português do Brasil-->
+    <head>
+        <title>Página de exemplo estrutura básica</title>
+        <meta charset="utf-8"> <!-- Tipo de codificação -->
+        <meta name="author" content="Daniel Collione">
+        <meta name="description" content="Seletores">
+        <meta name="keywords" content="html5, tecnologia, dev">
+
+        <style>
+            article:nth-child(1) a{
+                color: red;
+            } /*Seleciona todo "a" do primeiro article (nth-child)*/
+
+            article:nth-child(3) > p{
+                color: red;
+            }/* ">" seleciona filho direto do article */
+
+            article:nth-child(5) h3+ p{
+                color: red;
+            }/* ""+ formata o elemendo que vem imediatamente  apos o h3 */
+
+            article:nth-child(7) h3 ~ p{
+                color: orange;
+            } /* todos os paragrafos depois de h3 */
+
+            article:not(.destaque){
+                color:orange;
+            } /* todos os articles possuem a cor laranja, exceto o da classe .destaque */
+
+            .destaque{
+                background-color: yellow;
+            }
+
+            a[href="#"]{
+                opacity: .2;
+            } /* todos os links que possuem href="#" */
+
+            a[href^="http"]{
+                color: red;
+            } /*seleciona todos links com href="http" */
+
+            a[title]{
+                color: green;
+            } /*link com atributo title*/
+
+            a[href$=".pdf"]{
+                text-decoration: none;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+        <article>
+            <h3>
+                titulo
+            </h3>
+            <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>
+                titulo
+            </h3>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>    
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>
+                titulo
+            </h3>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>    
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>
+                titulo
+            </h3>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>    
+        </article>
+
+        <hr>
+
+        <article class="destaque">
+            <h3>
+                titulo
+            </h3>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>    
+        </article>
+
+        <ul>
+            <li><a href="#">link falso</a></li>
+            <li><a href="#">link falso</a></li>
+            <li><a href="http://serfrontend.com" target="blanck">link externo</a></li>
+            <li><a href="http://serfrontend.pdf" target="blanck">link externo</a></li>
+            <li><a href="23_transition.html">link interno</a></li>
+            <li><a href="23_transition.html" title="ex anterior">link interno</a></li>
+        </ul>
+    </body>
+</html>

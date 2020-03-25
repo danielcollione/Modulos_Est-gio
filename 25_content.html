@@ -1,0 +1,66 @@
+<!doctype html> 
+<!--Documentação HTML: informa ao agente de usuario a versão do html que deve ser
+    renderizada.-->   
+
+<html lang="pt-br"> <!--Idioma português do Brasil-->
+    <head>
+        <title>Página de exemplo estrutura básica</title>
+        <meta charset="utf-8"> <!-- Tipo de codificação -->
+        <meta name="author" content="Daniel Collione">
+        <meta name="description" content="Seletores">
+        <meta name="keywords" content="html5, tecnologia, dev">
+
+        <style>
+
+            div{
+                border: 3px solid red;
+                padding: 25px;
+                position: relative;
+                margin: 25px;
+            }
+
+            div:before{
+                content: "before: ";
+                background-color: #ccc;
+            } /*escreve um texto antes de iniciar a div selecionada 
+                -não selecionavel
+                -nao identificado para aparelhos de buscar
+            */
+
+            div:after{
+                content: "";
+                background: red;
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+
+        <div> texto principal da div</div>
+
+        <article class="destaque">
+            <h3>
+                titulo
+            </h3>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>    
+        </article>
+
+        <ul>
+            <li><a href="#">link falso</a></li>
+            <li><a href="#">link falso</a></li>
+            <li><a href="http://serfrontend.com" target="blanck">link externo</a></li>
+            <li><a href="http://serfrontend.pdf" target="blanck">link externo</a></li>
+            <li><a href="23_transition.html">link interno</a></li>
+            <li><a href="23_transition.html" title="ex anterior">link interno</a></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html> 
+<!--Documentação HTML: informa ao agente de usuario a versão do html que deve ser
+    renderizada.-->   
+
+<html lang="pt-br"> <!--Idioma português do Brasil-->
+    <head>
+        <title>Página de exemplo estrutura básica</title>
+        <meta charset="utf-8"> <!-- Tipo de codificação -->
+        <meta name="author" content="Daniel Collione">
+        <meta name="description" content="Childs">
+        <meta name="keywords" content="html5, tecnologia, dev">
+
+        <style>
+
+            div p:nth-of-type(3){
+                color: red;
+            } /* nth só serve para elementos */
+
+            .destaque{
+                background: #ddd;
+            }
+
+            .destaque:nth-of-type(1){
+                color: orange;
+            } 
+            
+            .destaque:first-child{
+                color: blue;
+            }
+
+            p:last-child{
+                text-align: center;
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+        
+        <div>
+            <p class="destaque">meu paragrafo</p>
+            <p>meu paragrafo</p>
+            <hr>
+            <p class="destaque">meu paragrafo</p>
+            <p>meu paragrafo</p>
+            <hr>
+            <p>meu paragrafo</p>
+            <p class="destaque">meu paragrafo</p>
+            <hr>
+            <p>meu paragrafo</p>
+            <p>meu paragrafo</p>
+            
+        </div>
+
+    </body>
+</html>
