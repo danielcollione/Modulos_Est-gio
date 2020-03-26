@@ -1,0 +1,82 @@
+<!doctype html> 
+<!--Documentação HTML: informa ao agente de usuario a versão do html que deve ser
+    renderizada.-->   
+
+<html lang="pt-br"> <!--Idioma português do Brasil-->
+    <head>
+        <title>Página de exemplo estrutura básica</title>
+        <meta charset="utf-8"> <!-- Tipo de codificação -->
+        <meta name="author" content="Daniel Collione">
+        <meta name="description" content="Slide Show">
+        <meta name="keywords" content="html5, tecnologia, dev">
+    
+        <style>
+
+            @keyframes slide{
+                0%, 22% ,100%{
+                    transform: translateY(0);
+                }
+                25%, 47%{
+                    transform: translateY(-50vh);
+                }
+                50%, 72%{
+                    transform: translateY(-100vh);
+                }
+                75%, 97%{
+                    transform: translateY(-150vh);
+                }
+            }
+
+            body{
+                font-family: sans-serif;
+                color: white;
+                background: #1a1818;
+                margin: 0;
+            }
+
+            #slide-externo{
+                width: 80vw;
+                height: 50vh;
+                border: 10px solid white;
+                box-shadow: 0 0 10px black;
+                margin-left: 10vw;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+
+            #slide-interno{
+                width: 100%; 
+                animation: slide 15s infinite cubic-bezier(.5,-0.73,.59,1.77);
+                will-change: transform;  /*Entretanto pode ser apropriado incluir will-change no seu estilo css 
+                                        para uma aplicação que faz page flips quando uma tecla é pressionada como 
+                                        um álbum ou uma apresentação de slides, onde a página é grande e complexa. 
+                                        Isso irá dizer ao navegador para preparar a transição à frente do tempo e 
+                                        aceitar transições entre as páginas assim que a tecla for pressionada.*/           
+            }
+
+            #slide-interno img{
+                display: block;
+                height: 50vh;
+                width: 100%;
+                /*object-fit: cover;  */               
+            }
+
+        </style>
+    
+    </head>
+    
+    <body>
+        
+        <h2>Animation - SlideShow</h2>
+
+        <div id="slide-externo">
+            <div id="slide-interno">
+                <img src="imagens/slide1.jpg" alt="dog1">
+                <img src="imagens/slide2.jpg" alt="dog2">
+                <img src="imagens/slide3.jpg" alt="dog3">
+                <img src="imagens/slide4.jpg" alt="dog4">
+            </div>
+        </div>
+
+    </body>
+</html>
