@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação JavaScript</title>
+        <meta charset="utf-8">
+
+
+    </head>
+    <body>
+        <h1>Lógica de programação com JavaScript</h1>
+    </body> 
+        <script>
+              
+            var n1 = parseFloat(prompt('Jogador 1, digite um número: '));
+            var n2 = parseFloat(prompt('Jogador 2, digite um número: '));
+            var c = parseInt(Math.random() * 2); //Sorteia um numero entre 0 e 1, com o parseInt arredonda para 0 ou 1
+
+            if(n1 == n2){
+                alert("EMPATE!!");
+            }
+            else if(c === 0){
+                if(n1 < n2){
+                    alert("O Jogador 1 GANHOU!");
+                }else{
+                    alert("O Jogador 2 GANHOU!");
+                }
+            }
+            else{
+                if(n1 > n2){
+                    alert("O Jogador 1 GANHOU!");
+                }else{
+                    alert("O Jogador 2 GANHOU!");
+                }
+            }    
+            
+
+        </script>
+    
+</html>
