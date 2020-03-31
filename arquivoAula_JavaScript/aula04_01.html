@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação JavaScript</title>
+        <meta charset="utf-8">
+
+
+    </head>
+    <body>
+        <h1>Lógica de programação com JavaScript</h1>
+        
+        <button onclick="mostrarTabuada()">Criar Tabuada</button> <!--OnClick passa uma funcionalidade para o botão-->
+        <button onclick="limparTabuada()">Limpar Tabuada</button>
+        <div id="output"></div>
+        
+        <script>
+
+            function  mostrarTabuada(){
+                //perguntar o numero para o usuario
+                var n = prompt('digite um numero: ');
+
+                limparTabuada();
+                //converter o numero
+                n = parseFloat(n);
+                //criar uma variavel que servira de indice
+                var i = 1;
+                //enquanto indice <= 1000
+                //concatena na variavel mensagem
+                while(i<=1000){
+                    mensagem += n + ' x ' + i + '=' + (n*i) + '<br>';
+                    i++;
+                }
+
+                output.innerHTML = mensagem;
+
+            }
+
+            
+            function limparTabuada(){
+                mensagem = '';
+                output.innerHTML = mensagem;
+            }
+            
+            var output = document.querySelector('#output'); //document serve para acessar metodos do html.            
+            var mensagem = '';
+            output.innerHTML = mensagem;
+
+            
+
+        </script>
+    </body>
+</html>
