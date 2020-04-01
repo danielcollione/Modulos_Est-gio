@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <input type="text" id="txtnome" value="" placeholder="digite seu nome.">
+        <button onclick="escreve()">OK</button>
+        <div id="msg"></div>
+
+
+        <script>
+         //para alteração com o document.getElementsByClassName, passar o índice quando for section ou conjunto.   
+            var txtnome2 = document.querySelector('#txtnome');
+            
+            
+            //document.getElementById('msg');
+
+            function escreve(){
+                var nome = txtnome2.value;
+                document.querySelector('#msg').innerHTML = "Bem-vindo, <b>" + nome + "</b>";
+
+            }
+
+            /*
+                    TextContent = textos dentro de tags;
+                    InnerHTML = tags html dentro do elemento de buscas;
+                    "".value = elementos HTML de formulários;
+            */
+            
+        
+        </script>
+        
+    </body>
+</html>
