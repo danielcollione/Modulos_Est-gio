@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+        <style>
+            .done{
+                text-decoration: line-through;
+                color: #555;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+
+            <input type="text" id="txtTask">
+            <button id="btn">Cadastrar tarefa.</button>
+           
+            <ul>
+                <li>Estudar JavaScript - DOM</li>
+                <li>Estudar JavaScript - Eventos</li>
+                <li>Jogar Video-Game</li>
+            </ul>
+
+        </div>
+
+        <script>
+            
+            (function(){
+                'user strict';
+                
+                var $ul = document.querySelector('ul'); //Selecionando a Ul do HTML
+                var $lis = $ul.querySelectorAll('li'); //Selecionando as Lis da Ul selecionado acima
+                var $txtTask = document.querySelector('#txtTask'); //Selecionando o campo input com id: txtTask
+                var $btn = document.querySelector('#btn'); //Selecionando o botão
+
+                $btn.addEventListener('click', addTask);
+                $txtTask.addEventListener('keyup', function(e){
+                    if(e.keyCode === 13){
+                        addTask();
+                    } //tecla Enter tem o numero 13 (keyCode)
+                });
+
+                $ul.addEventListener('click', function(e){
+                    if(e.target.nodeName === 'LI'){
+                        toggleDone(e.target);
+                    }
+                })
+
+                function toggleDone(li){
+                    li.classList.toggle('done');
+                }
+
+                function addTask(){
+                    
+                    var li = document.createElement('li');
+                    var text = document.createTextNode($txtTask.value);
+
+                    li.appendChild(text); //Acrescentando o valor do Texto dentro da Li
+
+                    $ul.appendChild(li);   
+
+                    $txtTask.value = '';
+                    $txtTask.focus();
+                }
+
+            })()
+            
+        </script>
+        
+    </body>
+</html>

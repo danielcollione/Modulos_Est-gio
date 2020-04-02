@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+            
+            <form action="#">
+
+
+            <textarea id="contrato" cals="50" rows="10" readonly>Contrato de serviço prestados</textarea>
+            <br>
+            <label>
+                <input type="checkbox" id="chk" checked>Li e aceito os termos deste contrato.
+            </label> 
+            <br>
+            <input type="submit" value="Continuar" id="btn">
+           
+        </form>
+        </div>
+
+        <script>
+            
+            (function(){
+                'user strict';
+                
+                var $btn = document.getElementById('btn');
+                var $chk = document.getElementById('chk');
+
+                toggleBtn();
+                    
+                $chk.addEventListener('change', function(){
+
+                    /*if(this.checked === true){
+                        $btn.disabled = false;
+                    }else{
+                        $btn.disabled = true;
+                    }*/
+
+                    toggleBtn();
+
+                });
+
+                function toggleBtn(){
+                    $btn.disabled = !$chk.checked;
+                }    
+
+            })()
+            
+        </script>
+        
+    </body>
+</html>
