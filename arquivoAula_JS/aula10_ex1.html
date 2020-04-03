@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação JavaScript</title>
+        <meta charset="utf-8">
+
+
+    </head>
+    <body>
+        <h1>Lógica de programação com JavaScript</h1>
+        <script>
+            
+            var nome = "Daniel Collione Fais";
+            var nomeFormatado = formatarNome(nome);
+
+            function formatarNome(nome){
+                //return "Fais, Daniel Collione";
+                var posicaoUltimoEspaco = nome.lastIndexOf(' ');
+                if(posicaoUltimoEspaco <= 0){
+                    return nome;
+                }
+                var ultimoNome = nome.slice(posicaoUltimoEspaco);
+                console.log('ultimoNome', ultimoNome);
+
+                var primeiroNome = nome.slice(0, posicaoUltimoEspaco);
+                console.log('posicaoUltimoEspaco', posicaoUltimoEspaco);
+
+                return ultimoNome + ' , ' + primeiroNome;
+            }
+
+            console.log(nomeFormatado);
+            
+        </script>
+    </body>
+</html>
